@@ -1,0 +1,21 @@
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 14
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 8
+    }
+
+    release {
+        runProguard false
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+    }
+}
+
+dependencies {
+    compile files('libs/httpmime-4.1.jar')
+    compile files('libs/okhttp-1.2.1-jar-with-dependencies.jar')
+}
